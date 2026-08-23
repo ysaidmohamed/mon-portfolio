@@ -1,6 +1,6 @@
 # Mon E-Portfolio
 
-Portfolio professionnel de **Younness Said Mohamed**, développeur web full-stack.
+Portfolio professionnel de **Younness Said Mohamed**.
 
 Le site présente mon parcours scolaire, mes compétences, mes réalisations, mes certificats, mon environnement technologique et ma veille informatique.
 
@@ -191,16 +191,6 @@ Elles restent disponibles localement et sont ignorées grâce à la règle suiva
 5. Lancer le déploiement.
 
 Vercel détecte automatiquement les commandes Next.js du projet.
-
-## Améliorations possibles
-
-- Ajouter un formulaire de contact
-- Ajouter des tests automatisés
-- Ajouter un mode sombre
-- Ajouter des animations de transition
-- Ajouter des images d'aperçu pour les projets
-- Ajouter une pagination des projets GitHub
-- Mettre en place GitHub Actions pour automatiser le lint et le build
 
 ## Contact
 
