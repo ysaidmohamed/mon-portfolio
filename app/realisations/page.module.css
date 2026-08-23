@@ -1,0 +1,381 @@
+.page {
+  --ink: #20231f;
+  --muted: #6d7068;
+  --line: #d8d8ce;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 6.5rem 2rem 7rem;
+}
+
+.header {
+  max-width: 760px;
+  margin-bottom: 3.75rem;
+}
+
+.eyebrow {
+  margin-bottom: 1rem;
+  color: #b15c39;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.headingRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.headingRow h1 {
+  color: var(--ink);
+  font-size: clamp(2.75rem, 6vw, 5.25rem);
+  font-weight: 650;
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+}
+
+.projectCount {
+  flex: 0 0 auto;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.45rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.description {
+  max-width: 500px;
+  margin-top: 1.75rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.emptyState {
+  border: 1px dashed var(--line);
+  padding: 3rem 1.5rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.portfolioContent {
+  margin-top: 8rem;
+}
+
+.contentHeader {
+  max-width: 720px;
+  margin-bottom: 3rem;
+}
+
+.contentHeader h2,
+.subheading h2 {
+  color: var(--ink);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 650;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.eyebrow {
+  margin-bottom: 1rem;
+  color: #b15c39;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.contentDescription {
+  max-width: 580px;
+  margin-top: 1.25rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.resources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 1rem 0;
+}
+
+.resource {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  border: 1px solid rgb(32 35 31 / 16%);
+  padding: 0.7rem 0.85rem;
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.resource span:first-child {
+  color: #b15c39;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.68rem;
+}
+
+.resource:hover,
+.inlineResource:hover {
+  color: #b15c39;
+}
+
+.competences {
+  margin-top: 4rem;
+  border-top: 1px solid var(--line);
+}
+
+.competence {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  gap: 1rem;
+  border-bottom: 1px solid var(--line);
+  padding: 2rem 0 2.25rem;
+}
+
+.layoutMarker {
+  display: block;
+  width: 100%;
+  min-height: 1px;
+}
+
+.stagePeriod {
+  color: #b15c39;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.competence h3,
+.stage h3 {
+  color: var(--ink);
+  font-size: clamp(1.25rem, 2.2vw, 1.8rem);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.competence ul {
+  display: grid;
+  gap: 0.5rem;
+  margin: 1.25rem 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.result,
+.stage p:last-child {
+  max-width: 780px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.inlineResource {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--ink);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.stages {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 7rem;
+}
+
+.subheading {
+  grid-column: 1 / -1;
+  margin-bottom: 1.5rem;
+}
+
+.stage {
+  border-top: 1px solid var(--line);
+  padding-top: 1.5rem;
+}
+
+.stage h3 {
+  margin: 1rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  min-height: 390px;
+  flex-direction: column;
+  grid-column: span 4;
+  overflow: hidden;
+  border: 1px solid rgb(32 35 31 / 12%);
+  border-radius: 4px;
+  padding: 1.5rem;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card::after {
+  position: absolute;
+  right: -3rem;
+  bottom: -4rem;
+  width: 11rem;
+  height: 11rem;
+  border: 1px solid rgb(255 255 255 / 35%);
+  border-radius: 50%;
+  content: '';
+  transition: transform 0.4s ease;
+}
+
+.card1 { background: #e6efe5; }
+.card2 { background: #f2d7ba; }
+.card3 { background: #d8e4e2; }
+.card:nth-child(n + 4) { background: #e9ede5; }
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgb(32 35 31 / 35%);
+  box-shadow: 0 20px 35px rgb(32 35 31 / 12%);
+}
+
+.card:hover::after {
+  transform: scale(1.25);
+}
+
+.cardTopline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.arrow {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border: 1px solid rgb(32 35 31 / 22%);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.card:hover .arrow {
+  background: var(--ink);
+  color: white;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+}
+
+.card h2 {
+  max-width: 250px;
+  margin-bottom: 0.85rem;
+  color: var(--ink);
+  font-size: 1.8rem;
+  font-weight: 650;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.card p {
+  margin-bottom: 1.5rem;
+  color: rgb(32 35 31 / 68%);
+  line-height: 1.55;
+}
+
+.tags {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tags span {
+  border: 1px solid rgb(32 35 31 / 16%);
+  border-radius: 2px;
+  background: rgb(255 255 255 / 30%);
+  padding: 0.35rem 0.55rem;
+  color: rgb(32 35 31 / 72%);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .page {
+    padding-top: 4.5rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .card {
+    grid-column: span 1;
+  }
+
+  .card:last-child {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 3.5rem 1.25rem 5rem;
+  }
+
+  .headingRow {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header {
+    margin-bottom: 2.5rem;
+  }
+
+  .portfolioContent {
+    margin-top: 5rem;
+  }
+
+  .competence {
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1.5rem 0 1.75rem;
+  }
+
+  .stages {
+    grid-template-columns: 1fr;
+    margin-top: 5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  .card:last-child {
+    grid-column: span 1;
+  }
+}

@@ -1,0 +1,141 @@
+.page {
+  --ink: #20231f;
+  --muted: #6d7068;
+  --line: #d8d8ce;
+  --accent: #b15c39;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 6.5rem 2rem 7rem;
+}
+
+.header {
+  max-width: 920px;
+  margin-bottom: 4.5rem;
+}
+
+.eyebrow {
+  margin-bottom: 1rem;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.headingRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.headingRow h1 {
+  max-width: 760px;
+  color: var(--ink);
+  font-size: clamp(2.75rem, 6vw, 5.25rem);
+  font-weight: 650;
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+}
+
+.period {
+  flex: 0 0 auto;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.45rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.description {
+  max-width: 580px;
+  margin-top: 1.75rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.content {
+  border-top: 1px solid var(--line);
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  gap: 1rem;
+  border-bottom: 1px solid var(--line);
+  padding: 2rem 0 2.25rem;
+}
+
+.layoutMarker {
+  display: block;
+  width: 100%;
+  min-height: 1px;
+}
+
+.sectionBody {
+  max-width: 850px;
+}
+
+.section h2 {
+  max-width: 800px;
+  color: var(--ink);
+  font-size: clamp(1.25rem, 2.2vw, 1.8rem);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.section p {
+  max-width: 760px;
+  margin-top: 0.9rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.resource {
+  display: inline-block;
+  margin-top: 1.25rem;
+  color: var(--ink);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.resource span {
+  display: inline-block;
+  margin-left: 0.35rem;
+  transition: transform 0.2s ease;
+}
+
+.resource:hover {
+  color: var(--accent);
+}
+
+.resource:hover span {
+  transform: translate(0.15rem, -0.15rem);
+}
+
+@media (max-width: 700px) {
+  .page {
+    padding: 4.5rem 1.25rem 5rem;
+  }
+
+  .header {
+    margin-bottom: 3rem;
+  }
+
+  .headingRow {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .section {
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1.5rem 0 1.75rem;
+  }
+}

@@ -16,6 +16,16 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Projets GitHub
+
+Les réalisations de `/realisations` sont chargées depuis l'API GitHub. Copiez `.env.example` vers `.env.local`, puis renseignez l'URL de l'API dans `GITHUB_PROJECTS_API_URL` :
+
+```env
+GITHUB_PROJECTS_API_URL=https://api.github.com/users/votre-compte/repos?sort=updated&per_page=12
+```
+
+Un `GITHUB_TOKEN` peut être ajouté dans `.env.local` pour augmenter la limite d'appels de l'API. Ne publiez jamais ce token.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

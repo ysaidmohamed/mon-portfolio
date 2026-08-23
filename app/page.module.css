@@ -1,0 +1,365 @@
+/* Hero Section - Conteneur principal */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Contenu centré */
+.heroContent {
+  max-width: 800px;
+  text-align: center;
+  color: white;
+}
+
+/* Titre principal */
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+/* Nom en surbrillance */
+.highlight {
+  color: #ffd700;
+  display: block;
+}
+
+/* Sous-titre */
+.heroSubtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+/* Description */
+.heroDescription {
+  font-size: 1.125rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.85;
+  line-height: 1.8;
+}
+
+/* Conteneur des boutons */
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Style de base des boutons */
+.btn {
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* Bouton principal */
+.btnPrimary{
+  background-color: white;
+  color: #364AB0;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Bouton secondaire */
+.btnSecondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btnSecondary:hover {
+  background-color: white;
+  color: #364AB0;
+  transform: translateY(-2px);
+}
+
+/* Responsive : mobile */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.25rem;
+  }
+
+  .heroDescription {
+    font-size: 1rem;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* Editorial home layout */
+.hero {
+  position: relative;
+  min-height: calc(100svh - 3.5rem);
+  overflow: hidden;
+  padding: clamp(4rem, 9vw, 8rem) 1.5rem;
+  background: var(--paper);
+}
+
+.hero::before,
+.hero::after {
+  position: absolute;
+  border: 1px solid rgb(14 85 87 / 18%);
+  border-radius: 50%;
+  content: '';
+  pointer-events: none;
+}
+
+.hero::before {
+  top: -12rem;
+  right: -8rem;
+  width: 34rem;
+  height: 34rem;
+}
+
+.hero::after {
+  right: 12%;
+  bottom: -10rem;
+  width: 20rem;
+  height: 20rem;
+  border-color: rgb(215 107 77 / 22%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(14rem, 0.34fr);
+  gap: clamp(2rem, 8vw, 8rem);
+  width: min(1120px, 100%);
+  max-width: none;
+  color: var(--ink);
+  text-align: left;
+}
+
+.heroTitle {
+  max-width: 760px;
+  margin-bottom: 0;
+  font-size: clamp(3.25rem, 8vw, 7.5rem);
+  font-weight: 700;
+  letter-spacing: -0.075em;
+  line-height: 0.9;
+}
+
+.highlight {
+  display: block;
+  color: var(--coral);
+}
+
+.heroSubtitle {
+  margin-top: 2rem;
+  color: var(--teal);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 650;
+  opacity: 1;
+}
+
+.heroDescription {
+  max-width: 540px;
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 1;
+}
+
+.heroButtons {
+  justify-content: flex-start;
+  gap: 0.7rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  padding: 0.7rem 1.1rem;
+  color: var(--ink);
+  font-size: 0.82rem;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background: var(--ink);
+  color: var(--paper);
+  box-shadow: none;
+}
+
+.btnPrimary {
+  border-color: var(--teal);
+  background: var(--teal);
+  color: white;
+}
+
+.btnPrimary:hover {
+  border-color: var(--coral);
+  background: var(--coral);
+}
+
+.btnSecondary {
+  border-width: 1px;
+  background: transparent;
+}
+
+.heroContent > div:last-child {
+  align-self: end;
+  border-left: 1px solid var(--line);
+  padding: 1.25rem 0 1.25rem 1.5rem;
+}
+
+.heroContent > div:last-child::before {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--coral);
+  content: 'Outils & technologies';
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.education {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(14rem, 0.34fr) minmax(0, 1fr);
+  gap: clamp(2rem, 8vw, 8rem);
+  margin-top: 5rem;
+  border-top: 1px solid var(--line);
+  padding-top: 2rem;
+}
+
+.educationHeading h2 {
+  color: var(--ink);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 650;
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+}
+
+.educationEyebrow {
+  margin-bottom: 0.85rem;
+  color: var(--coral);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.educationList {
+  border-top: 1px solid var(--line);
+}
+
+.educationItem {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.42fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--line);
+  padding: 1.25rem 0;
+}
+
+.educationPeriod {
+  color: var(--coral);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.educationItem h3 {
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.educationItem div p {
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.educationCurrent {
+  border-bottom: 0;
+}
+
+.educationCurrent .educationPeriod::before {
+  display: inline-block;
+  width: 0.45rem;
+  height: 0.45rem;
+  margin: 0 0.45rem 0.05rem 0;
+  border-radius: 50%;
+  background: var(--coral);
+  content: '';
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: auto;
+    padding-top: 4.5rem;
+    padding-bottom: 5rem;
+  }
+
+  .heroContent {
+    display: block;
+  }
+
+  .heroTitle {
+    font-size: clamp(3.2rem, 15vw, 5rem);
+  }
+
+  .heroButtons {
+    gap: 0.55rem;
+    align-items: flex-start;
+  }
+
+  .btn {
+    width: auto;
+  }
+
+  .heroContent > div:last-child {
+    margin-top: 3.5rem;
+  }
+
+  .education {
+    display: block;
+    margin-top: 4rem;
+  }
+
+  .educationList {
+    margin-top: 2rem;
+  }
+
+  .educationItem {
+    display: block;
+  }
+
+  .educationItem div {
+    margin-top: 0.4rem;
+  }
+}
