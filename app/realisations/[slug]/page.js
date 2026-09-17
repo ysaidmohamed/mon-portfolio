@@ -6,7 +6,7 @@ export default async function ProjectDetail({ params }) {
     const projects = await getGithubProjects()
     const project = projects.find((repository) => repository.slug === slug)
 
-  // Si le projet n'existe pas, afficher un message
+    // Les projets viennent de GitHub : ils peuvent donc disparaître entre deux visites.
   if (!project) {
       return (
           <div className="container">

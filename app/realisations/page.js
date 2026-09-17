@@ -8,6 +8,7 @@ import {
 import styles from './page.module.css'
 
 export default async function Realisations() {
+  // Les projets sont chargés depuis GitHub afin que cette page reste synchronisée avec le profil.
   const projects = await getGithubProjects()
 
   return (

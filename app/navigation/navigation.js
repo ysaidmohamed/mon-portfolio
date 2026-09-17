@@ -5,9 +5,11 @@ import styles from './navigation.module.css'
 
 export default function Navigation() {
   const pathname = usePathname()
+  // Une page enfant reste active lorsque son chemin commence par celui du lien.
   const isActive = (href) =>
     href === '/' ? pathname === '/' : pathname === href || pathname.startsWith(`${href}/`)
 
+  // Centraliser les liens évite de dupliquer le rendu et facilite l'ajout d'une rubrique.
   const links = [
     { href: '/', label: 'Accueil' },
     { href: '/competences', label: 'Compétences' },

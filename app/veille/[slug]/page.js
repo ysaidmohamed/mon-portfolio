@@ -5,6 +5,7 @@ import { getVeilleBySlug, veilles } from '../../../lib/veilles'
 import styles from './page.module.css'
 
 export function generateStaticParams() {
+  // Pré-générer une page pour chaque veille connue dans les données locales.
   return veilles.map((veille) => ({ slug: veille.slug }))
 }
 
@@ -12,6 +13,7 @@ export default async function VeilleDetail({ params }) {
   const { slug } = await params
   const veille = getVeilleBySlug(slug)
 
+  // Délègue l'affichage de la page 404 de Next.js si le slug est inconnu.
   if (!veille) {
     notFound()
   }
